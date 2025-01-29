@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="images/my-avatar.png" alt="Rajneesh Rai" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Rajneesh Rai">Rajneesh Rai</h1>
+
+          <p class="title">Web & Software developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:rajneeshrai1204@gmail.com" class="contact-link">rajneeshrai1204@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+91" class="contact-link">+91 8964912921</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2001-04-12">April 12, 2001</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Jabalpur, MP, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+
+
+        <!-- <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul> -->
+
+
+        
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+      
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <br><br>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Creative Director in Android and Web Designer from Jabalpur, Madhya Pradesh, India, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Graphics Design</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos & thumbnails of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Team Members</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="images/my-avatar.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Rohit Chakrawarti Sir</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Graduated from "Indira Gandhi Engineering College, Sagar, Madhya Pradesh". 
+                    <span>B.tech (Electronics & Communications)</span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="images/avatar-1.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ashish Sahu Sir</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Graduated from "Shri Ram Institute of Technology, Jabalpur, Madhya Pradesh".
+                    <span>B.tech (Mechanicals)</span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+<!--             <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Name</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Profession
+                    <span></span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Name</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Profession
+                    <span></span>
+                  </p>
+                </div>
+
+              </div>
+            </li>
+ -->
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Social Profiles</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.linkedin.com/in/rajneesh-rai-84b176285" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin-logo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://twitter.com/therajneesh_?t=YP0NFrEaFoKAS0RsIPNamQ&s=09" target="_blank" rel="noopener noreferrer">
+                <img src="images/twitter-logo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.instagram.com/therajneesh__/" target="_blank" rel="noopener noreferrer">
+                <img src="images/instagram-logo.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.facebook.com/therajneesh12" target="_blank" rel="noopener noreferrer">
+                <img src="images/facebook-icon.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.youtube.com/channel/UCsPue56Q9cQWQNWrPQ0rAQQ" target="_blank" rel="noopener noreferrer">
+                <img src="images/youtube-logo.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <br><br>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Master of Computer Application</h4>
+
+              <span>Govt. Rani Durgavati University, Jabalpur (M.P.)</span>
+
+              <p class="timeline-text">
+                2023-2025 (persuing)
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Computer Application</h4>
+
+              <span>Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal ( M.P.)</span>
+
+              <p class="timeline-text">
+                2020-2023
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Higher Secondary - PCM</h4>
+
+              <span>Glorious Public School, Sihora, Jabalpur ( M.P.) | MP Board</span>
+
+              <p class="timeline-text">
+                2020
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Development</h4>
+
+              <span>2023 — Present</span>
+
+              <p class="timeline-text">
+                Web Development and Solving Problems.
+                Learning to build Android.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Softwre Dvelopment</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web Design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphics Design</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="80">80%%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+
+
+
+
+        <section class="programmingskills"><br>
+
+          <h3 class="h3 programmingskills-title">Programming skills</h3><br>
+        
+          <ul class="programmingskills-list content-card">
+        
+            <li class="programmingskills-item">
+              <div class="programmingskills-box">
+                <h5 class="h5">Java</h5>
+              </div>
+            </li>
+        
+            <li class="programmingskills-item">
+              <div class="programmingskills-box">
+                <h5 class="h5">Python</h5>
+              </div>
+            </li>
+        
+            <li class="programmingskills-item">
+              <div class="programmingskills-box">
+                <h5 class="h5">SQL</h5>
+              </div>
+            </li>
+        
+            <li class="programmingskills-item">
+              <div class="programmingskills-box">
+                <h5 class="h5">CSharp</h5>
+              </div>
+            </li>
+
+            <li class="programmingskills-item"></li>
+              <div class="programmingskills-box">
+                <h5 class="h5">HTML</h5>
+              </div>
+            </li>
+
+            <li class="programmingskills-item"></li>
+              <div class="programmingskills-box">
+                <h5 class="h5">CSS</h5>
+              </div>
+            </li>
+        
+          </ul>
+        
+        </section>
+
+
+
+
+
+
+        
+
+
+
+
+      
+      <!--
+        - #CODING PROFILES
+      -->
+
+
+      
+      <section class="coding" data-page="coding">
+        
+        <header>
+          <br><br>
+          <h2 class="h2 article-title">Coding Profiles</h2>
+        </header>
+      
+        <section class="coding-posts">
+
+
+          <ul class="coding-posts-list">
+
+
+            <li class="coding-post-item">
+              <a href="https://www.hackerrank.com/profile/rajneeshrai1204" target="_blank" rel="noopener noreferrer">
+                <figure class="coding-banner-box">
+                  <img src="images/hackarrank.png" alt="HackerRank Profile" loading="lazy">
+                </figure>
+                <div class="coding-content">
+                  <h3 class="h3 coding-item-title">HackerRank</h3>
+                </div>
+              </a>
+            </li>
+
+      
+            <li class="coding-post-item">
+              <a href="https://leetcode.com/u/therajneesh/" target="_blank" rel="noopener noreferrer">
+                <figure class="coding-banner-box">
+                  <img src="images/LeetCode.png" alt="LeetCode Profile" loading="lazy">
+                </figure>
+                <div class="coding-content">
+                  <h3 class="h3 coding-item-title">LeetCode</h3>
+                </div>
+              </a>
+            </li>
+
+
+      
+            <li class="coding-post-item">
+              <a href="https://www.geeksforgeeks.org/user/therajneesh/" target="_blank" rel="noopener noreferrer">
+                <figure class="coding-banner-box">
+                  <img src="images/gfg.png" alt="Geeks For Geeks Profile" loading="lazy">
+                </figure>
+                <div class="coding-content">
+                  <h3 class="h3 coding-item-title">Geeks For Geeks</h3>
+                </div>
+              </a>
+            </li>
+
+      
+            <li class="coding-post-item">
+              <a href="https://www.codechef.com/users/therajneesh" target="_blank" rel="noopener noreferrer">
+                <figure class="coding-banner-box">
+                  <img src="images/codechef.png" alt="CodeChef Profile" loading="lazy">
+                </figure>
+                <div class="coding-content">
+                  <h3 class="h3 coding-item-title">CodeChef</h3>
+                </div>
+              </a>
+            </li>
+
+
+          </ul>
+
+
+        </section>
+
+
+      </section>
+    
+    </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+            <br><br>
+            <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+    
+        <section class="projects">
+    
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <button class="active" data-filter-btn>All</button>
+                </li>
+                <li class="filter-item">
+                    <button data-filter-btn>Web Design</button>
+                </li>
+                <li class="filter-item">
+                    <button data-filter-btn>Applications</button>
+                </li>
+                <li class="filter-item">
+                    <button data-filter-btn>Graphics Design</button>
+                </li>
+            </ul>
+    
+            <div class="filter-select-box">
+                <button class="filter-select" data-select>
+                    <div class="select-value" data-selecct-value>Select category</div>
+                    <div class="select-icon">
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </div>
+                </button>
+                <ul class="select-list">
+                    <li class="select-item">
+                        <button data-select-item>All</button>
+                    </li>
+                    <li class="select-item">
+                        <button data-select-item>Web Design</button>
+                    </li>
+                    <li class="select-item">
+                        <button data-select-item>Applications</button>
+                    </li>
+                    <li class="select-item">
+                        <button data-select-item>Graphics Design</button>
+                    </li>
+                </ul>
+            </div>
+    
+            <ul class="project-list">
+    
+                <!-- Web Design Projects -->
+                <li class="project-item active" data-filter-item data-category="web design">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/portfolio.JPG" alt="Portfolio 1" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Portfolio-1</h3>
+                        <p class="project-category">Web design</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="web design">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/portfolio-2.JPG" alt="Portfolio 2" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Portfolio-2</h3>
+                        <p class="project-category">Web design</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="web design">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/LOGIN.JPG" alt="LogIN/SignUP page" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">LogIN/SignUP page</h3>
+                        <p class="project-category">Web Design</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="web design">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/TC.JPG" alt="Temperature Converter" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Temperature Converter</h3>
+                        <p class="project-category">Web Design</p>
+                    </a>
+                </li>
+    
+                <!-- Applications Projects -->
+                <li class="project-item active" data-filter-item data-category="applications">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/Calculator.JPG" alt="Calculator" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Calculator</h3>
+                        <p class="project-category">Applications</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="applications">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/Clock.JPG" alt="Digital Clock" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Digital Clock</h3>
+                        <p class="project-category">Applications</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="applications">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/WC.JPG" alt="Weight Converter" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Weight Converter</h3>
+                        <p class="project-category">Applications</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="applications">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/LC.JPG" alt="Length Converter" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Length Converter</h3>
+                        <p class="project-category">Applications</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="applications">
+                    <a href="#">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="eye-outline"></ion-icon>
+                            </div>
+                            <img src="images/AGE C.JPG" alt="Age Checker" loading="lazy">
+                        </figure>
+                        <h3 class="project-title">Age Checker</h3>
+                        <p class="project-category">Applications</p>
+                    </a>
+                </li>
+    
+            </ul>
+    
+        </section>
+    </article>
+    
+
+
+
+
+      <!--
+        - #CERTIFICATES
+      -->
+
+      <article class="certificates" data-page="certificates">
+
+        <header>
+          <br><br>
+          <h2 class="h2 article-title">Certificates</h2>
+        </header>
+
+        <section class="certificates-posts">
+
+          <ul class="certificates-posts-list">
+
+            
+            <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/1PuU54Y_KGzuMH7prwJkrOd0qH4FdbuuR/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/Software Engineer Intern.png" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-09-30">Nov 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">Software Engineer Intern</h3>
+
+                  <p class="certificates-text">
+                    Accomplishment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li
+
+
+
+              <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/1HuaKsd-rYPpUJUAl1W6PQv09fNS3xZcF/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/SQL (Intermediate).png" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-09-30">Nov 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">SQL (Intermediate)</h3>
+
+                  <p class="certificates-text">
+                    Accomplishment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li
+            
+            
+            
+            
+            <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/1sIvSmsoYdCQh8CJWnND6bIp2fhQCW6u0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/python (basic).jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-09-30">Sept 30, 2023</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">Python (Basic)</h3>
+
+                  <p class="certificates-text">
+                    Assesment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            
+
+            <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/1nL27unUQubEExXmH7n2ZuYHfRWbhL8Sz/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/csharp (basic).jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-09-04">Sept 04, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">CSharp (basic)</h3>
+
+                  <p class="certificates-text">
+                    Assesment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+            
+
+            <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/10Pvh4YlUdIaMmwSMMCX_f2u501rSijCi/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/sql (basic).jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-09-04">Sept 04, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">SQL (Basic)</h3>
+
+                  <p class="certificates-text">
+                    Assesment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+            
+
+            <li class="certificates-post-item">
+              <a href="https://drive.google.com/file/d/14rICIM1gJj2YxTrikn7GU2fM3_8c7xiR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/problem solving (basic).jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Qualified</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2024-09-04">Sept 04, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">Problem Solving (basic)</h3>
+
+                  <p class="certificates-text">
+                    Assesment for the skill test.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+
+            
+
+            <li class="certificates-post-item">
+              <a href="">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/JAVA 5star.JPG" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Achivements</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2024-09-05">Sept 05, 2024</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">JAVA 5star</h3>
+
+                  <p class="certificates-text">
+                    Achieved the 5 star golden badge for solving problems in "HackerRank".
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+
+            
+
+            <li class="certificates-post-item">
+              <a href="">
+
+                <figure class="certificates-banner-box">
+                  <img src="images/Python 4.JPG" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="certificates-content">
+
+                  <div class="certificates-meta">
+                    <p class="certificates-category">Achivements</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 certificates-item-title">Python 4star</h3>
+
+                  <p class="certificates-text">
+                    Achieved the 4 star Silver+ badge for solving problems in "HackerRank".                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <br><br>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7316.328619575393!2d79.93847462573372!3d23.181467900001344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae438243eabb%3A0x7ed2a07fa84b5074!2sJabalpur%2C%20Madhya%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1695388842731!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>        
+
+        <!-- <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+        
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+        
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+        
+          </form>
+        
+        </section>         -->
+
+
+
+        <section class="contact-form">
+          <form action="sendmail.php" method="POST" class="form">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+
+
+        
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
