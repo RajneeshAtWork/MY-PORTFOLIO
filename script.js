@@ -94,6 +94,41 @@ const filterFunc = function (selectedValue) {
 
 }
 
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const filterBtns = document.querySelectorAll("[data-filter-btn]");
+//   const projectItems = document.querySelectorAll("[data-filter-item]");
+
+//   filterBtns.forEach((btn) => {
+//     btn.addEventListener("click", function () {
+//       filterBtns.forEach((button) => button.classList.remove("active"));
+//       this.classList.add("active");
+
+//       const filterValue = this.textContent.toLowerCase().replace(/\s/g, "-");
+      
+//       projectItems.forEach((item) => {
+//         const itemCategory = item.dataset.category.toLowerCase();
+
+//         if (filterValue === "all" || itemCategory === filterValue) {
+//           item.style.display = "block";
+//         } else {
+//           item.style.display = "none";
+//         }
+//       });
+//     });
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
