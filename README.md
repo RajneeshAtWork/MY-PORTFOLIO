@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio
 
 Welcome to my personal portfolio project! This portfolio showcases my **skills**, **experience**, and **projects** in a visually appealing and user-friendly design. It has been crafted with attention to detail using **HTML**, **CSS**, and **JavaScript**.
@@ -64,3 +65,6 @@ Your feedback is invaluable to me! Feel free to **open an issue** or reach out t
 ---
 
 Thank you for visiting my portfolio! 😊
+=======
+# second_portfolio
+>>>>>>> 08fef7f72716dade018bd8c6f3db46612138b5cc
