@@ -38,7 +38,6 @@ Welcome to my personal portfolio project! This portfolio showcases my **skills**
 
 You can see the portfolio live at:
 
-[https://therajneesh1.github.io/second_portfolio/](https://therajneesh1.github.io/second_portfolio/)
 https://rajneeshatwork.github.io/MY-PORTFOLIO/
 
 ---
