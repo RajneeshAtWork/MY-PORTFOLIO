@@ -1,210 +1,117 @@
-'use strict';
+﻿"use strict";
 
+// Existing portfolio interactions, consolidated into one script.
+// Category button labels are mapped to the data-category slugs in index.html.
+const toggleActive = (element) => element?.classList.toggle("active");
 
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+sidebarBtn?.addEventListener("click", () => toggleActive(sidebar));
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// Team-member modal
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+function closeModal() {
+  modalContainer?.classList.remove("active");
+  overlay?.classList.remove("active");
 }
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
+document.querySelectorAll("[data-testimonials-item]").forEach(item => {
+  item.addEventListener("click", () => {
+    const avatar = item.querySelector("[data-testimonials-avatar]");
+    const title = item.querySelector("[data-testimonials-title]");
+    const description = item.querySelector("[data-testimonials-text]");
+    if (!modalContainer || !overlay || !avatar || !title || !description) return;
+    if (modalImg) { modalImg.src = avatar.src; modalImg.alt = avatar.alt; }
+    if (modalTitle) modalTitle.textContent = title.textContent;
+    if (modalText) modalText.innerHTML = description.innerHTML;
+    modalContainer.classList.add("active");
+    overlay.classList.add("active");
   });
+});
+modalCloseBtn?.addEventListener("click", closeModal);
+overlay?.addEventListener("click", closeModal);
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeModal();
+});
 
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
+// Project filters: both desktop buttons and mobile custom select.
+const portfolio = document.querySelector('article[data-page="projects"]');
+if (portfolio) {
+  const categoryMap = {
+    "all": "all",
+    "web design": "web-design",
+    "applications": "applications",
+    "ui/ux/graphics design": "ui/ux/graphics-design"
+  };
+  const desktopButtons = [...portfolio.querySelectorAll("[data-filter-btn]")];
+  const mobileButtons = [...portfolio.querySelectorAll("[data-select-item]")];
+  const filterItems = [...portfolio.querySelectorAll("[data-filter-item]")];
+  const select = portfolio.querySelector("[data-select]");
+  const selectValue = portfolio.querySelector("[data-select-value]");
+  function filterProjects(label) {
+    const normalized = label.trim().toLowerCase().replace(/\\s+/g, " ");
+    const category = categoryMap[normalized];
+    if (!category) return;
+    filterItems.forEach(item => {
+      item.classList.toggle("active", category === "all" || item.dataset.category === category);
+    });
+    desktopButtons.forEach(button => {
+      const active = button.textContent.trim().toLowerCase() === normalized;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    if (selectValue) selectValue.textContent = label;
+    select?.classList.remove("active");
+    select?.setAttribute("aria-expanded", "false");
   }
-
-}
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const filterBtns = document.querySelectorAll("[data-filter-btn]");
-//   const projectItems = document.querySelectorAll("[data-filter-item]");
-
-//   filterBtns.forEach((btn) => {
-//     btn.addEventListener("click", function () {
-//       filterBtns.forEach((button) => button.classList.remove("active"));
-//       this.classList.add("active");
-
-//       const filterValue = this.textContent.toLowerCase().replace(/\s/g, "-");
-      
-//       projectItems.forEach((item) => {
-//         const itemCategory = item.dataset.category.toLowerCase();
-
-//         if (filterValue === "all" || itemCategory === filterValue) {
-//           item.style.display = "block";
-//         } else {
-//           item.style.display = "none";
-//         }
-//       });
-//     });
-//   });
-// });
-
-
-
-
-
-
-
-
-
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+  desktopButtons.forEach(button => button.addEventListener("click", () => {
+    filterProjects(button.textContent.trim());
+  }));
+  mobileButtons.forEach(button => button.addEventListener("click", () => {
+    filterProjects(button.textContent.trim());
+  }));
+  select?.setAttribute("aria-expanded", "false");
+  select?.addEventListener("click", () => {
+    const opened = select.classList.toggle("active");
+    select.setAttribute("aria-expanded", String(opened));
   });
-
+  document.addEventListener("click", event => {
+    if (select && !select.closest(".filter-select-box")?.contains(event.target)) {
+      select.classList.remove("active");
+      select.setAttribute("aria-expanded", "false");
+    }
+  });
+  filterProjects("All");
 }
 
-
-
-// contact form variables
+// Contact form: enable submission only when HTML validation passes.
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const updateFormState = () => { if (form && formBtn) formBtn.disabled = !form.checkValidity(); };
+formInputs.forEach(input => input.addEventListener("input", updateFormState));
+updateFormState();
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// Page navigation: compare data-page with button text, without relying on innerHTML.
+const navigationLinks = [...document.querySelectorAll("[data-nav-link]")];
+const pages = [...document.querySelectorAll("article[data-page]")];
+navigationLinks.forEach(link => link.addEventListener("click", () => {
+  const pageName = link.textContent.trim().toLowerCase();
+  pages.forEach(page => page.classList.toggle("active", page.dataset.page === pageName));
+  navigationLinks.forEach(button => button.classList.toggle("active", button === link));
+  window.scrollTo({ top: 0, behavior: "auto" });
+}));
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
-}
-
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-
-
-
-// Select all navbar links
-const navLinks = document.querySelectorAll('.navbar-link');
-
-// Add a click event listener to each button
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        // Remove active class from all links
-        navLinks.forEach(btn => btn.classList.remove('active'));
-        // Add active class to the clicked link
-        this.classList.add('active');
-    });
-});
+// Modern project category filters
+(() => {
+ const root=document.querySelector('article[data-page="projects"]');if(!root)return;
+ const buttons=[...root.querySelectorAll('[data-modern-filter]')];
+ const groups=[...root.querySelectorAll('[data-project-group]')];
+ function show(category){buttons.forEach(b=>{const active=b.dataset.modernFilter===category;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});groups.forEach(g=>g.hidden=category!=='all'&&g.dataset.projectGroup!==category);}
+ buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.modernFilter)));
+ root.querySelectorAll('[data-show-category]').forEach(b=>b.addEventListener('click',()=>{show(b.dataset.showCategory);root.querySelector('.modern-filters')?.scrollIntoView({behavior:'smooth',block:'start'});}));show('all');
+})();
